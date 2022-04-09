@@ -1,0 +1,23 @@
+{
+  "name": "blogr-landing-page",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Blogr landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+  "source": "index.html",
+  "scripts": {
+    "compile": "sass --watch --no-source-map styles/main.scss styles/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richieAiello/blogr-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richieAiello/blogr-landing-page/issues"
+  },
+  "homepage": "https://github.com/richieAiello/blogr-landing-page#readme",
+  "dependencies": {
+    "sass": "^1.50.0"
+  }
+}
