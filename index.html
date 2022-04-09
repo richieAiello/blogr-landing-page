@@ -31,12 +31,16 @@
                     <div class="nav__top">
                         <ul class="nav__list">
                             <li class="product">
+                                <!-- On click display product list -->
                                 <button class="btn btn--product">
                                     Product
+                                    <!-- Hidden on desktop -->
                                     <img src="./assets/icon-arrow-dark.svg" alt="" class="icon__arrow icon__dark-arrow">
+                                    <!-- Hidden on mobile -->
                                     <img src="./assets/icon-arrow-light.svg" alt="" class="icon__arrow icon__light-arrow">
                                 </button>
                                 
+                                <!-- Hidden on page load -->
                                 <ul class="product__list">
                                     <li class="product__item">
                                         <a href="#" class="product__link link">Overview</a>
@@ -56,12 +60,16 @@
                                 </ul>
                             </li>
                             <li class="company">
+                                <!-- On click display company list -->
                                 <button class="btn btn--company">
                                     Company
+                                    <!-- Hidden on desktop -->
                                     <img src="./assets/icon-arrow-dark.svg" alt="" class="icon__arrow icon__dark-arrow">
+                                    <!-- Hidden on mobile -->
                                     <img src="./assets/icon-arrow-light.svg" alt="" class="icon__arrow icon__light-arrow">
                                 </button>
                                 
+                                <!-- Hidden on page load -->
                                 <ul class="company__list">
                                     <li class="company__item">
                                         <a href="#" class="company__link link">About</a>
@@ -77,13 +85,17 @@
                                     </li>
                                 </ul>
                             </li>
+                            <!-- On click display connect list -->
                             <li class="connect">
                                 <button class="btn btn--connect">
                                     Connect
+                                    <!-- Hidden on desktop -->
                                     <img src="./assets/icon-arrow-dark.svg" alt="" class="icon__arrow icon__dark-arrow">
+                                    <!-- Hidden on mobile -->
                                     <img src="./assets/icon-arrow-light.svg" alt="" class="icon__arrow icon__light-arrow">
                                 </button>
 
+                                <!-- Hidden on page load -->
                                 <ul class="connect__list">
                                     <li class="connect__item">
                                         <a href="#" class="connect__link link">Contact</a>
@@ -111,8 +123,10 @@
                 </div>
             </nav>
             <section class="hero__context">
+
                 <h1 class="hero__heading heading">A modern publishing platform</h1>
                 <p class="hero__text">Grow your audience and build your online brand</p>
+
                 <div class="hero__wrapper">
                     <a href="#" class="hero__link link">Start for Free</a>
                     <a href="#" class="hero__link link">Learn More</a>
@@ -122,10 +136,25 @@
     </header>
     <main class="main">
         <section class="main__future container">
+
             <h2 class="main__heading heading">Designed for the future</h2>
-            
+
             <div class="main__wrapper">
+                <!-- Hidden on desktop -->
+                <img 
+                    src="./assets/illustration-editor-mobile.svg" 
+                    alt="Stylish illustrative editor" 
+                    class="image image--editor-mobile"
+                >
+                <!-- Hidden on mobile -->
+                <img 
+                    src="./assets/illustration-editor-desktop.svg" 
+                    alt="Stylish illustrative editor" 
+                    class="image image--editor-desktop"
+                >
+                
                 <div class="main__context">
+
                     <h3 class="main__sub-heading heading">Introducing an extensible editor</h3>
                     <p class="main__text">
                         Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
@@ -143,20 +172,27 @@
             </div>
         </section>
         <section class="main__infrastructure">
-            <div class="container">
-                <div class="main__wrapper">
-                    <div class="main__context">
-                        <h2 class="main__heading heading">State of the Art Infrastructure</h2>
-                        <p class="main__text">
-                            With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
-                            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-                        </p>
-                    </div>
+            
+            <div class="main__wrapper container">
+                <div class="main__context">
+
+                    <h2 class="main__heading heading">State of the Art Infrastructure</h2>
+                    <p class="main__text">
+                        With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+                        This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+                    </p>
                 </div>
+
+                <img 
+                    src="./assets/illustration-phones.svg" 
+                    alt="Two smartphones with the Blogr logo."
+                    class="image image--phones"    
+                >
             </div>
         </section>
         <section class="main__open-source container">
             <div class="main__context">
+
                 <h3 class="main__sub-heading heading">Free, open, simple</h3>
                 <p class="main__text">
                     Blogr is a free and open source application backed by a large community of helpful developers. It supports 
@@ -170,6 +206,18 @@
                     capable of producing even the most complicated sites.
                 </p>
             </div>
+            <!-- Hidden on desktop -->
+            <img 
+                src="./assets/illustration-laptop-mobile.svg" 
+                alt="Stylish laptop"
+                class="image image--laptop-mobile"    
+            >
+            <!-- Hidden on mobile    -->
+            <img 
+                src="./assets/illustration-laptop-desktop.svg" 
+                alt="Stylish laptop"
+                class="image image--laptop-desktop"    
+            >
         </section>
     </main>
     <footer class="footer">
