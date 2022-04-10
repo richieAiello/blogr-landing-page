@@ -146,6 +146,7 @@
 .main__open-source {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .main__open-source .main__context {
   order: 2;
@@ -158,6 +159,34 @@
 /********************************
     Footer
 ********************************/
+.footer {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.125rem;
+  line-height: 2.0625rem;
+  color: #ffffff;
+  background-color: #24242c;
+  padding: 4.6875rem 0;
+  border-top-right-radius: 100px;
+}
+.footer .logo {
+  margin-bottom: 2rem;
+}
+.footer__list {
+  list-style: none;
+}
+.footer__heading {
+  font-weight: 500;
+  margin-top: 2.5rem;
+  margin-bottom: 1.3125rem;
+}
+.footer__link {
+  opacity: 0.75;
+  font-weight: 300;
+}
+.footer__link:hover, .footer__link:focus {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+}
+
 /********************************
     Buttons
 ********************************/
