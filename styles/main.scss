@@ -9,9 +9,13 @@ $grey-blue: #c8c8cb;
 $dark-grey-blue: #4b5862;
 $dark-black-blue: #25252d;
 
-// gradient red
-$gradient-orange: #ff8f71;
-$gradient-red: #ff3e55;
+// gradient hero
+$gradient-hero-1: #ff8f71;
+$gradient-hero-2: #ff3e55;
+
+// gradient body
+$gradient-body-1: #2d2e40;
+$gradient-body-2: #3f4164;
 
 /********************************
     Reset and Scrollbar
@@ -64,20 +68,18 @@ $gradient-red: #ff3e55;
     color: $white;
     background-image:
         url("../assets/bg-pattern-intro-mobile.svg"), 
-        linear-gradient(to bottom right, $gradient-orange, $gradient-red);
+        linear-gradient(to bottom right, $gradient-hero-1, $gradient-hero-2);
     background-repeat: no-repeat;
     background-size: initial;
     background-position: 30% 30%;
+
     // Back-up color in case broswer fails to load background image
     background-color: $red;
+
     padding-top: 3.5rem;
     padding-bottom: 9.75rem;
     margin-bottom: 6.25rem;
     border-bottom-left-radius: 100px ;
-
-    // &__context {
-        
-    // }
 
     &__heading {
         font-size: 2.25rem;
@@ -92,10 +94,6 @@ $gradient-red: #ff3e55;
     &__wrapper {
         margin-top: 3rem;
     }
-
-    // &__link {
-
-    // }
 }
 
 .nav {
@@ -124,15 +122,42 @@ $gradient-red: #ff3e55;
 
 
 /********************************
-    Buttons and Links
+    Buttons
 ********************************/
-.btn {
+// .btn {
+
+//     // &--hamburger {
+
+//     // }
+
+//     // &--product {
+
+//     // }
+
+//     // &--company {
+
+//     // }
+
+//     // &--connect {
+
+//     // }
+
+//     // &--login {
+
+//     // }
+
+//     // &--sign-up {
+
+//     // }
     
-}
+//     // &--start {
 
-.link {
+//     // }
 
-}
+//     // &--learn {
+
+//     // }
+// }
 
 /********************************
     Images and Icons
@@ -140,21 +165,21 @@ $gradient-red: #ff3e55;
 .image {
     max-width: 100%;
 
-    &--editor-mobile {
+    // &--editor-mobile {
 
-    }
+    // }
 
     &--editor-desktop {
         display: none;
     }
 
-    &--phones {
+    // &--phones {
 
-    }
+    // }
 
-    &--laptop-mobile {
+    // &--laptop-mobile {
 
-    }
+    // }
 
     &--laptop-desktop {
         display: none;
@@ -163,21 +188,21 @@ $gradient-red: #ff3e55;
 
 .icon {
 
-    &--hamburger {
+    // &--hamburger {
 
-    }
+    // }
 
-    &--close {
+    // &--close {
 
-    }
+    // }
 
-    &--arrow {
+    // &--arrow {
 
-    }
+    // }
 
-    &--dark-arrow {
+    // &--dark-arrow {
 
-    }
+    // }
 
     &--light-arrow {
         display: none;
