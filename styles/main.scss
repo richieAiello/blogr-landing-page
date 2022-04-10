@@ -1,8 +1,8 @@
 /********************************
     Colors
 ********************************/
-$red: #ff525d;
-$light-red: #ff7a85;
+$red: #ff505c;
+$light-red: #ff7b86;
 $dark-blue: #1f3f5b;
 $white: #ffffff;
 $grey-blue: #c8c8cb;
@@ -29,6 +29,7 @@ $gradient-body-2: #3f4164;
 }
 
 .btn {
+    display: inline-block;
     border: initial;
     background-color: initial;
 }
@@ -124,40 +125,67 @@ $gradient-body-2: #3f4164;
 /********************************
     Buttons
 ********************************/
-// .btn {
+.btn {
+    transition: all 250ms;
 
-//     // &--hamburger {
+    // &--hamburger {
 
-//     // }
+    // }
 
-//     // &--product {
+    // &--product {
 
-//     // }
+    // }
 
-//     // &--company {
+    // &--company {
 
-//     // }
+    // }
 
-//     // &--connect {
+    // &--connect {
 
-//     // }
+    // }
 
-//     // &--login {
+    // &--login {
 
-//     // }
+    // }
 
-//     // &--sign-up {
+    // &--sign-up {
 
-//     // }
+    // }
+
+    &--start,
+    &--learn {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 700;
+        font-size: inherit;
+        line-height: 1.14875rem;
+        border-radius: 100px;
+    }
     
-//     // &--start {
+    &--start {
+        color: $red;
+        background-color: $white;
+        padding: 0.9375em 1em 0.9375em 1.0625em;
+        margin-right: 1rem;
 
-//     // }
+        &:hover,
+        &:focus {
+            background-color: $light-red;
+            color: $white;
+        }
+    }
 
-//     // &--learn {
+    &--learn {
+        color: white; 
+        border: 1px solid $white;
+        padding: 0.875em 1.4375em 0.875em 1.5em;
 
-//     // }
-// }
+        &:hover,
+        &:focus {
+            background-color: $white;
+            color: $red;
+        }
+    }
+}
 
 /********************************
     Images and Icons
