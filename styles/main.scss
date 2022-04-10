@@ -3,7 +3,7 @@
 ********************************/
 $red: #ff505c;
 $light-red: #ff7b86;
-$dark-blue: #1f3f5b;
+$dark-blue: #1f3e5a;
 $white: #ffffff;
 $grey-blue: #c8c8cb;
 $dark-grey-blue: #4b5862;
@@ -115,6 +115,52 @@ $gradient-body-2: #3f4164;
 /********************************
     Main
 ********************************/
+.main {
+
+    &__heading {
+        font-size: 2.5rem;
+        line-height: 3.83rem;
+    }
+
+    &__sub-heading {
+        font-size: 1.75rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    } 
+
+    &__future {
+        margin-bottom: 17.0625rem;
+
+        .heading {
+            color: $dark-blue;
+        }
+
+        .main__heading {
+            font-size: 1.75rem;
+            line-height: 2.68125rem;
+            margin-bottom: 2.375rem;
+        }
+
+        .main__context {
+
+            .main__sub-heading:first-of-type {
+                margin-top: 2.875rem;
+            }
+
+            .main__text:first-of-type {
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+
+    &__infrastructure {
+
+    }
+
+    &__open-source {
+
+    }
+}
 
 
 /********************************
