@@ -90,6 +90,9 @@
 /********************************
     Main
 ********************************/
+.main {
+  margin-bottom: 6.25rem;
+}
 .main__heading {
   font-size: 2.5rem;
   line-height: 3.83rem;
@@ -98,6 +101,10 @@
   font-size: 1.75rem;
   line-height: 2rem;
   margin-bottom: 1rem;
+  color: #1f3e5a;
+}
+.main__text {
+  color: #4c5862;
 }
 .main__future {
   margin-bottom: 17.0625rem;
@@ -132,6 +139,20 @@
 }
 .main__infrastructure .main__heading {
   margin-bottom: 0.625rem;
+}
+.main__infrastructure .main__text {
+  color: inherit;
+}
+.main__open-source {
+  display: flex;
+  flex-direction: column;
+}
+.main__open-source .main__context {
+  order: 2;
+  margin-top: 2.875rem;
+}
+.main__open-source .main__context .main__text:first-of-type {
+  margin-bottom: 2.5rem;
 }
 
 /********************************
