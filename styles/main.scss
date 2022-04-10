@@ -154,12 +154,32 @@ $gradient-body-2: #3f4164;
     }
 
     &__infrastructure {
+        position: relative;
+        color: $white;
+        background-image:
+            url("../assets/bg-pattern-circles.svg"), 
+            linear-gradient(to bottom right, $gradient-body-1, $gradient-body-2);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top;
 
+        // Back-up color in case broswer fails to load background image
+        background-color: $dark-blue;
+        
+        border-bottom-left-radius: 100px;
+        border-top-right-radius: 100px;
+        padding-top: 13.8125rem;
+        padding-bottom: 5.8125rem;
+        margin-bottom: 5rem;
+
+        .main__heading {
+            margin-bottom: 0.625rem;
+        }
     }
 
-    &__open-source {
+    // &__open-source {
 
-    }
+    // }
 }
 
 
@@ -247,9 +267,14 @@ $gradient-body-2: #3f4164;
         display: none;
     }
 
-    // &--phones {
-
-    // }
+    &--phones {
+        width: min(100%, 350px);
+        position: absolute;
+        top: -165px;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+    }
 
     // &--laptop-mobile {
 

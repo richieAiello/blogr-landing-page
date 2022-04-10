@@ -116,6 +116,24 @@
 .main__future .main__context .main__text:first-of-type {
   margin-bottom: 2.5rem;
 }
+.main__infrastructure {
+  position: relative;
+  color: #ffffff;
+  background-image: url("../assets/bg-pattern-circles.svg"), linear-gradient(to bottom right, #2d2e40, #3f4164);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  background-color: #1f3e5a;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+  padding-top: 13.8125rem;
+  padding-bottom: 5.8125rem;
+  margin-bottom: 5rem;
+}
+.main__infrastructure .main__heading {
+  margin-bottom: 0.625rem;
+}
+
 /********************************
     Footer
 ********************************/
@@ -160,6 +178,14 @@
 }
 .image--editor-desktop {
   display: none;
+}
+.image--phones {
+  width: min(100%, 350px);
+  position: absolute;
+  top: -165px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
 }
 .image--laptop-desktop {
   display: none;
