@@ -1,0 +1,364 @@
+/********************************
+    Colors
+********************************/
+$red: #ff505c;
+$light-red: #ff7b86;
+$dark-blue: #1f3e5a;
+$white: #ffffff;
+$grey-blue: #c8c8cb;
+$dark-grey-blue: #4c5862;
+$dark-black-blue: #24242c;
+
+// gradient hero
+$gradient-hero-1: #ff8f71;
+$gradient-hero-2: #ff3e55;
+
+// gradient body
+$gradient-body-1: #2d2e40;
+$gradient-body-2: #3f4164;
+
+/********************************
+    Reset and Scrollbar
+********************************/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    display: inline-block;
+    border: initial;
+    background-color: initial;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/********************************
+    Base Styles
+********************************/
+.body {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    text-align: center;
+}
+
+.container {
+    width: min(100% - 3rem, 1110px);
+    margin-inline: auto;
+}
+
+.heading {
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+/********************************
+    Header
+********************************/
+.hero {
+    color: $white;
+    background-image:
+        url("../assets/bg-pattern-intro-mobile.svg"), 
+        linear-gradient(to bottom right, $gradient-hero-1, $gradient-hero-2);
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: 30% 30%;
+
+    // Back-up color in case broswer fails to load background image
+    background-color: $red;
+
+    padding-top: 3.5rem;
+    padding-bottom: 9.75rem;
+    margin-bottom: 6.25rem;
+    border-bottom-left-radius: 100px ;
+
+    &__heading {
+        font-size: 2.25rem;
+        line-height: 3.45rem;
+    }
+
+    &__text {
+        font-size: 1.125rem;
+        line-height: 1.72375rem;
+    }
+
+    &__wrapper {
+        margin-top: 3rem;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6.75rem;
+
+    .logo {
+        width: 82px;
+        height: 32px;
+    }
+
+    &__menu {
+        display: none;
+    }
+}
+
+/********************************
+    Main
+********************************/
+.main {
+    margin-bottom: 6.25rem;
+
+    &__heading {
+        font-size: 2.5rem;
+        line-height: 3.83rem;
+    }
+
+    &__sub-heading {
+        font-size: 1.75rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+        color: $dark-blue;
+    } 
+
+    &__text {
+        color: $dark-grey-blue;
+    }
+
+    &__future {
+        margin-bottom: 17.0625rem;
+
+        .heading {
+            color: $dark-blue;
+        }
+
+        .main__heading {
+            font-size: 1.75rem;
+            line-height: 2.68125rem;
+            margin-bottom: 2.375rem;
+        }
+
+        .main__context {
+
+            .main__sub-heading:first-of-type {
+                margin-top: 2.875rem;
+            }
+
+            .main__text:first-of-type {
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+
+    &__infrastructure {
+        position: relative;
+        color: $white;
+        // https://css-tricks.com/almanac/properties/b/background-size/
+        // Multiple background image reference article
+        background-image:
+            url("../assets/bg-pattern-circles.svg"),
+            linear-gradient(to bottom right, $gradient-body-1, $gradient-body-2);
+        background-position: 50% -24ch, center;
+        background-size: 602px 604px, cover;
+        background-repeat: no-repeat;
+
+        // Back-up color in case broswer fails to load background image
+        background-color: $dark-blue;
+        
+        border-bottom-left-radius: 100px;
+        border-top-right-radius: 100px;
+        padding-top: 13.8125rem;
+        padding-bottom: 5.8125rem;
+        margin-bottom: 5rem;
+
+        .main__heading {
+            margin-bottom: 0.625rem;
+        }
+
+        .main__text {
+            color: inherit;
+        }
+    }
+
+    &__open-source {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .main__context {
+            order: 2;
+            margin-top: 2.875rem;
+
+            .main__text:first-of-type {
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+}
+
+/********************************
+    Footer
+********************************/
+.footer {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    line-height: 2.0625rem;
+    color: $white;
+    background-color: $dark-black-blue;
+    padding: 4.6875rem 0;
+    border-top-right-radius: 100px;
+
+    .logo {
+        margin-bottom: 2rem;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__heading {
+        font-weight: 500;
+        margin-top: 2.5rem;
+        margin-bottom: 1.3125rem;
+    }
+
+    &__link {
+        opacity: .75;
+        font-weight: 300;
+
+        &:hover,
+        &:focus {
+            border-bottom: 2px solid rgba($white, .75);
+        }
+    }
+}
+
+
+/********************************
+    Buttons
+********************************/
+.btn {
+    transition: all 250ms;
+
+    // &--hamburger {
+
+    // }
+
+    // &--product {
+
+    // }
+
+    // &--company {
+
+    // }
+
+    // &--connect {
+
+    // }
+
+    // &--login {
+
+    // }
+
+    // &--sign-up {
+
+    // }
+
+    &--start,
+    &--learn {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 700;
+        font-size: inherit;
+        line-height: 1.14875rem;
+        border-radius: 100px;
+    }
+    
+    &--start {
+        color: $red;
+        background-color: $white;
+        padding: 0.9375em 1em 0.9375em 1.0625em;
+        margin-right: 1rem;
+
+        &:hover,
+        &:focus {
+            background-color: $light-red;
+            color: $white;
+        }
+    }
+
+    &--learn {
+        color: white; 
+        border: 1px solid $white;
+        padding: 0.875em 1.4375em 0.875em 1.5em;
+
+        &:hover,
+        &:focus {
+            background-color: $white;
+            color: $red;
+        }
+    }
+}
+
+/********************************
+    Images and Icons
+********************************/
+.image {
+    max-width: 100%;
+
+    // &--editor-mobile {
+
+    // }
+
+    &--editor-desktop {
+        display: none;
+    }
+
+    &--phones {
+        width: min(100%, 350px);
+        position: absolute;
+        top: -165px;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+    }
+
+    // &--laptop-mobile {
+
+    // }
+
+    &--laptop-desktop {
+        display: none;
+    }
+}
+
+.icon {
+
+    // &--hamburger {
+
+    // }
+
+    // &--close {
+
+    // }
+
+    // &--arrow {
+
+    // }
+
+    // &--dark-arrow {
+
+    // }
+
+    &--light-arrow {
+        display: none;
+    }   
+}

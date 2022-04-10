@@ -1,1 +1,246 @@
+/********************************
+    Colors
+********************************/
+/********************************
+    Reset and Scrollbar
+********************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
+.btn {
+  display: inline-block;
+  border: initial;
+  background-color: initial;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/********************************
+    Base Styles
+********************************/
+.body {
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  text-align: center;
+}
+
+.container {
+  width: min(100% - 3rem, 1110px);
+  margin-inline: auto;
+}
+
+.heading {
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+/********************************
+    Header
+********************************/
+.hero {
+  color: #ffffff;
+  background-image: url("../assets/bg-pattern-intro-mobile.svg"), linear-gradient(to bottom right, #ff8f71, #ff3e55);
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: 30% 30%;
+  background-color: #ff505c;
+  padding-top: 3.5rem;
+  padding-bottom: 9.75rem;
+  margin-bottom: 6.25rem;
+  border-bottom-left-radius: 100px;
+}
+.hero__heading {
+  font-size: 2.25rem;
+  line-height: 3.45rem;
+}
+.hero__text {
+  font-size: 1.125rem;
+  line-height: 1.72375rem;
+}
+.hero__wrapper {
+  margin-top: 3rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6.75rem;
+}
+.nav .logo {
+  width: 82px;
+  height: 32px;
+}
+.nav__menu {
+  display: none;
+}
+
+/********************************
+    Main
+********************************/
+.main {
+  margin-bottom: 6.25rem;
+}
+.main__heading {
+  font-size: 2.5rem;
+  line-height: 3.83rem;
+}
+.main__sub-heading {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  color: #1f3e5a;
+}
+.main__text {
+  color: #4c5862;
+}
+.main__future {
+  margin-bottom: 17.0625rem;
+}
+.main__future .heading {
+  color: #1f3e5a;
+}
+.main__future .main__heading {
+  font-size: 1.75rem;
+  line-height: 2.68125rem;
+  margin-bottom: 2.375rem;
+}
+.main__future .main__context .main__sub-heading:first-of-type {
+  margin-top: 2.875rem;
+}
+.main__future .main__context .main__text:first-of-type {
+  margin-bottom: 2.5rem;
+}
+.main__infrastructure {
+  position: relative;
+  color: #ffffff;
+  background-image: url("../assets/bg-pattern-circles.svg"), linear-gradient(to bottom right, #2d2e40, #3f4164);
+  background-position: 50% -24ch, center;
+  background-size: 602px 604px, cover;
+  background-repeat: no-repeat;
+  background-color: #1f3e5a;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+  padding-top: 13.8125rem;
+  padding-bottom: 5.8125rem;
+  margin-bottom: 5rem;
+}
+.main__infrastructure .main__heading {
+  margin-bottom: 0.625rem;
+}
+.main__infrastructure .main__text {
+  color: inherit;
+}
+.main__open-source {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__open-source .main__context {
+  order: 2;
+  margin-top: 2.875rem;
+}
+.main__open-source .main__context .main__text:first-of-type {
+  margin-bottom: 2.5rem;
+}
+
+/********************************
+    Footer
+********************************/
+.footer {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.125rem;
+  line-height: 2.0625rem;
+  color: #ffffff;
+  background-color: #24242c;
+  padding: 4.6875rem 0;
+  border-top-right-radius: 100px;
+}
+.footer .logo {
+  margin-bottom: 2rem;
+}
+.footer__list {
+  list-style: none;
+}
+.footer__heading {
+  font-weight: 500;
+  margin-top: 2.5rem;
+  margin-bottom: 1.3125rem;
+}
+.footer__link {
+  opacity: 0.75;
+  font-weight: 300;
+}
+.footer__link:hover, .footer__link:focus {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+/********************************
+    Buttons
+********************************/
+.btn {
+  transition: all 250ms;
+}
+.btn--start, .btn--learn {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 1.14875rem;
+  border-radius: 100px;
+}
+.btn--start {
+  color: #ff505c;
+  background-color: #ffffff;
+  padding: 0.9375em 1em 0.9375em 1.0625em;
+  margin-right: 1rem;
+}
+.btn--start:hover, .btn--start:focus {
+  background-color: #ff7b86;
+  color: #ffffff;
+}
+.btn--learn {
+  color: white;
+  border: 1px solid #ffffff;
+  padding: 0.875em 1.4375em 0.875em 1.5em;
+}
+.btn--learn:hover, .btn--learn:focus {
+  background-color: #ffffff;
+  color: #ff505c;
+}
+
+/********************************
+    Images and Icons
+********************************/
+.image {
+  max-width: 100%;
+}
+.image--editor-desktop {
+  display: none;
+}
+.image--phones {
+  width: min(100%, 350px);
+  position: absolute;
+  top: -165px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+}
+.image--laptop-desktop {
+  display: none;
+}
+
+.icon--light-arrow {
+  display: none;
+}
