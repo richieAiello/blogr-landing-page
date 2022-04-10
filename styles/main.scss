@@ -156,12 +156,14 @@ $gradient-body-2: #3f4164;
     &__infrastructure {
         position: relative;
         color: $white;
+        // https://css-tricks.com/almanac/properties/b/background-size/
+        // Multiple background image reference article
         background-image:
-            url("../assets/bg-pattern-circles.svg"), 
+            url("../assets/bg-pattern-circles.svg"),
             linear-gradient(to bottom right, $gradient-body-1, $gradient-body-2);
+        background-position: 50% -24ch, center;
+        background-size: 602px 604px, cover;
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: top;
 
         // Back-up color in case broswer fails to load background image
         background-color: $dark-blue;

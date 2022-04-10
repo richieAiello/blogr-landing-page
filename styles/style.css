@@ -120,9 +120,9 @@
   position: relative;
   color: #ffffff;
   background-image: url("../assets/bg-pattern-circles.svg"), linear-gradient(to bottom right, #2d2e40, #3f4164);
+  background-position: 50% -24ch, center;
+  background-size: 602px 604px, cover;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
   background-color: #1f3e5a;
   border-bottom-left-radius: 100px;
   border-top-right-radius: 100px;
