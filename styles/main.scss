@@ -1,0 +1,185 @@
+/********************************
+    Colors
+********************************/
+$red: #ff525d;
+$light-red: #ff7a85;
+$dark-blue: #1f3f5b;
+$white: #ffffff;
+$grey-blue: #c8c8cb;
+$dark-grey-blue: #4b5862;
+$dark-black-blue: #25252d;
+
+// gradient red
+$gradient-orange: #ff8f71;
+$gradient-red: #ff3e55;
+
+/********************************
+    Reset and Scrollbar
+********************************/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    border: initial;
+    background-color: initial;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/********************************
+    Base Styles
+********************************/
+.body {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    text-align: center;
+}
+
+.container {
+    width: min(100% - 3rem, 1110px);
+    margin-inline: auto;
+}
+
+.heading {
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+/********************************
+    Header
+********************************/
+.hero {
+    color: $white;
+    background-image:
+        url("../assets/bg-pattern-intro-mobile.svg"), 
+        linear-gradient(to bottom right, $gradient-orange, $gradient-red);
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: 30% 30%;
+    // Back-up color in case broswer fails to load background image
+    background-color: $red;
+    padding-top: 3.5rem;
+    padding-bottom: 9.75rem;
+    margin-bottom: 6.25rem;
+    border-bottom-left-radius: 100px ;
+
+    // &__context {
+        
+    // }
+
+    &__heading {
+        font-size: 2.25rem;
+        line-height: 3.45rem;
+    }
+
+    &__text {
+        font-size: 1.125rem;
+        line-height: 1.72375rem;
+    }
+
+    &__wrapper {
+        margin-top: 3rem;
+    }
+
+    // &__link {
+
+    // }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6.75rem;
+
+    .logo {
+        width: 82px;
+        height: 32px;
+    }
+
+    &__menu {
+        display: none;
+    }
+}
+
+/********************************
+    Main
+********************************/
+
+
+/********************************
+    Footer
+********************************/
+
+
+/********************************
+    Buttons and Links
+********************************/
+.btn {
+    
+}
+
+.link {
+
+}
+
+/********************************
+    Images and Icons
+********************************/
+.image {
+    max-width: 100%;
+
+    &--editor-mobile {
+
+    }
+
+    &--editor-desktop {
+        display: none;
+    }
+
+    &--phones {
+
+    }
+
+    &--laptop-mobile {
+
+    }
+
+    &--laptop-desktop {
+        display: none;
+    }
+}
+
+.icon {
+
+    &--hamburger {
+
+    }
+
+    &--close {
+
+    }
+
+    &--arrow {
+
+    }
+
+    &--dark-arrow {
+
+    }
+
+    &--light-arrow {
+        display: none;
+    }   
+}
