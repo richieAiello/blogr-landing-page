@@ -20,16 +20,18 @@
             <nav class="nav">
                 <img src="./assets/logo.svg" alt="Blogr logo" class="logo">
 
-                <!-- Hidden on larger screens -->
+                <!-- Hidden on desktop. Swapped with close button on click. -->
                 <button class="btn btn--hamburger">
-                    <!-- Displayed on page load and toggled on click -->
                     <img src="./assets/icon-hamburger.svg" alt="Open navigation menu" class="icon--hamburger">
-                    <!-- Hidden on page load and toggled on click -->
-                    <img src="./assets/icon-close.svg" alt="Close navigation menu" class="icon--close hidden">
+                </button>
+
+                <!-- Hidden on page load  and desktop. -->
+                <button class="btn btn--close hidden">
+                    <img src="./assets/icon-close.svg" alt="Close navigation menu" class="icon--close">
                 </button>
 
                 <!-- Hidden on small screens and accessed via hamburger icon -->
-                <div class="nav__menu">
+                <div class="nav__menu hidden">
                     <div class="nav__top">
                         <ul class="nav__list">
                             <li class="product">
@@ -44,21 +46,23 @@
                                 
                                 <!-- Hidden on page load -->
                                 <ul class="product__list">
-                                    <li class="product__item">
-                                        <a href="#" class="product__link link">Overview</a>
-                                    </li>
-                                    <li class="product__item">
-                                        <a href="#" class="product__link link">Pricing</a>
-                                    </li>
-                                    <li class="product__item">
-                                        <a href="#" class="product__link link">Marketplace</a>
-                                    </li>
-                                    <li class="product__item">
-                                        <a href="#" class="product__link link">Features</a>
-                                    </li>
-                                    <li class="product__item">
-                                        <a href="#" class="product__link link">Integrations</a>
-                                    </li>
+                                    <div class="container--list hidden">
+                                        <li class="product__item">
+                                            <a href="#" class="product__link link">Overview</a>
+                                        </li>
+                                        <li class="product__item">
+                                            <a href="#" class="product__link link">Pricing</a>
+                                        </li>
+                                        <li class="product__item">
+                                            <a href="#" class="product__link link">Marketplace</a>
+                                        </li>
+                                        <li class="product__item">
+                                            <a href="#" class="product__link link">Features</a>
+                                        </li>
+                                        <li class="product__item">
+                                            <a href="#" class="product__link link">Integrations</a>
+                                        </li>
+                                    </div>
                                 </ul>
                             </li>
                             <li class="company">
@@ -73,18 +77,20 @@
                                 
                                 <!-- Hidden on page load -->
                                 <ul class="company__list">
-                                    <li class="company__item">
-                                        <a href="#" class="company__link link">About</a>
-                                    </li>
-                                    <li class="company__item">
-                                        <a href="#" class="company__link link">Team</a>
-                                    </li>
-                                    <li class="company__item">
-                                        <a href="#" class="company__link link">Blog</a>
-                                    </li>
-                                    <li class="company__item">
-                                        <a href="#" class="company__link link">Careers</a>
-                                    </li>
+                                    <div class="container--list hidden">
+                                        <li class="company__item">
+                                            <a href="#" class="company__link link">About</a>
+                                        </li>
+                                        <li class="company__item">
+                                            <a href="#" class="company__link link">Team</a>
+                                        </li>
+                                        <li class="company__item">
+                                            <a href="#" class="company__link link">Blog</a>
+                                        </li>
+                                        <li class="company__item">
+                                            <a href="#" class="company__link link">Careers</a>
+                                        </li>
+                                    </div>
                                 </ul>
                             </li>
                             <!-- On click display connect list -->
@@ -99,15 +105,17 @@
 
                                 <!-- Hidden on page load -->
                                 <ul class="connect__list">
-                                    <li class="connect__item">
-                                        <a href="#" class="connect__link link">Contact</a>
-                                    </li>
-                                    <li class="connect__item">
-                                        <a href="#" class="connect__link link">Newsletter</a>
-                                    </li>
-                                    <li class="connect__item">
-                                        <a href="#" class="connect__link link">LinkedIn</a>
-                                    </li>
+                                    <div class="container--list hidden">
+                                        <li class="connect__item">
+                                            <a href="#" class="connect__link link">Contact</a>
+                                        </li>
+                                        <li class="connect__item">
+                                            <a href="#" class="connect__link link">Newsletter</a>
+                                        </li>
+                                        <li class="connect__item">
+                                            <a href="#" class="connect__link link">LinkedIn</a>
+                                        </li>
+                                    </div>
                                 </ul>
                             </li>
                         </ul>
@@ -115,10 +123,10 @@
                     <div class="nav__bottom">
                         <ul class="nav__list">
                             <li class="nav__item">
-                                <a href="#" class="btn btn--login">Login</a>
+                                <a href="#" class="btn btn--login link">Login</a>
                             </li>
                             <li class="nav__item">
-                                <a href="#" class="btn btn--sign-up">Sign Up</a>
+                                <a href="#" class="btn btn--sign-up link">Sign Up</a>
                             </li>
                         </ul>
                     </div>
