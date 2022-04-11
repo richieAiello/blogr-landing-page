@@ -101,7 +101,19 @@ $gradient-body-2: #3f4164;
     }
 
     &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-top: 3rem;
+
+        @media(min-width: 350px) {
+
+            & {
+                display: block;
+                flex-direction: unset;
+                align-items: unset;
+            }
+        }
     }
 }
 
@@ -207,9 +219,13 @@ $gradient-body-2: #3f4164;
 
     &__text {
         color: $dark-grey-blue;
+        max-width: 50ch;
+        margin-inline: auto;
     }
 
     &__future {
+        display: flex;
+        flex-direction: column;
         margin-bottom: 17.0625rem;
 
         .heading {
@@ -220,9 +236,11 @@ $gradient-body-2: #3f4164;
             font-size: 1.75rem;
             line-height: 2.68125rem;
             margin-bottom: 2.375rem;
+            order: 1;
         }
 
         .main__context {
+            order: 3;
 
             .main__sub-heading:first-of-type {
                 margin-top: 2.875rem;
@@ -267,7 +285,6 @@ $gradient-body-2: #3f4164;
     &__open-source {
         display: flex;
         flex-direction: column;
-        align-items: center;
 
         .main__context {
             order: 2;
@@ -399,12 +416,20 @@ $gradient-body-2: #3f4164;
         color: $red;
         background-color: $white;
         padding: 0.9375em 1em 0.9375em 1.0625em;
-        margin-right: 1rem;
-
+        margin-bottom: 1rem;
+        
         &:hover,
         &:focus {
             background-color: $light-red;
             color: $white;
+        }
+
+        @media(min-width: 350px) {
+
+            & {
+                margin-bottom: 0;
+                margin-right: 1rem;
+            }
         }
     }
 
@@ -426,10 +451,13 @@ $gradient-body-2: #3f4164;
 ********************************/
 .image {
     max-width: 100%;
+    object-fit: cover;
 
-    // &--editor-mobile {
-
-    // }
+    &--editor-mobile {
+        width: min(100%, 450px);
+        margin-inline: auto;
+        order: 2;
+    }
 
     &--editor-desktop {
         display: none;
@@ -444,9 +472,10 @@ $gradient-body-2: #3f4164;
         margin-inline: auto;
     }
 
-    // &--laptop-mobile {
-
-    // }
+    &--laptop-mobile {
+        width: min(100%, 450px);
+        margin-inline: auto;
+    }
 
     &--laptop-desktop {
         display: none;
