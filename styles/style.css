@@ -146,6 +146,7 @@
 .nav .connect__link:focus {
   color: #1f3e5a;
 }
+
 /********************************
     Main
 ********************************/
@@ -253,8 +254,16 @@
   transition: all 250ms;
 }
 .btn--product, .btn--company, .btn--connect {
+  display: flex;
+  margin-inline: auto;
+  align-items: center;
   font-size: 1.125rem;
   font-weight: 600;
+}
+.btn--product:hover, .btn--product:focus, .btn--company:hover, .btn--company:focus, .btn--connect:hover, .btn--connect:focus {
+  cursor: pointer;
+  text-decoration: underline 2px;
+  opacity: 75%;
 }
 .btn--login {
   font-size: 1.125rem;
@@ -263,7 +272,7 @@
 }
 .btn--login:hover, .btn--login:focus {
   text-decoration: underline 2px;
-  letter-spacing: 1.25px;
+  opacity: 75%;
 }
 .btn--sign-up {
   font-size: inherit;
@@ -327,6 +336,13 @@
   display: none;
 }
 
+.icon--arrow {
+  margin-left: 0.5rem;
+  transition: all 500ms;
+}
 .icon--light-arrow {
   display: none;
+}
+.icon--flip {
+  transform: rotate(180deg);
 }

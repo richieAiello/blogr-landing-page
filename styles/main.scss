@@ -181,14 +181,11 @@ $gradient-body-2: #3f4164;
         }
     }
 
-    .company {
-
-    }
-
-    .connect {
-
-    }
-
+    // .product,
+    // .company,
+    // .connect {
+        
+    // }
 }
 
 /********************************
@@ -335,8 +332,18 @@ $gradient-body-2: #3f4164;
     &--product,
     &--company,
     &--connect {
+        display: flex;
+        margin-inline: auto;
+        align-items: center;
         font-size: 1.125rem;
         font-weight: 600;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            text-decoration: underline 2px;
+            opacity: 75%;
+        }
     }
 
     // &--company {
@@ -355,7 +362,7 @@ $gradient-body-2: #3f4164;
         &:hover,
         &:focus {
             text-decoration: underline 2px;
-            letter-spacing: 1.25px;
+            opacity: 75%;
         }
     }
 
@@ -457,9 +464,10 @@ $gradient-body-2: #3f4164;
 
     // }
 
-    // &--arrow {
-
-    // }
+    &--arrow {
+        margin-left: 0.5rem;
+        transition: all 500ms;
+    }
 
     // &--dark-arrow {
 
@@ -467,5 +475,9 @@ $gradient-body-2: #3f4164;
 
     &--light-arrow {
         display: none;
-    }   
+    }
+    
+    &--flip {
+        transform: rotate(180deg);
+    }
 }
