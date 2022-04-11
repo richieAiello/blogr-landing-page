@@ -108,7 +108,13 @@
   padding-top: 1.5rem;
 }
 .nav__bottom {
+  border-top: 2px solid #E8E4E4;
+  margin-inline: 1.5rem;
+  padding-top: 1.5625rem;
   padding-bottom: 2rem;
+}
+.nav__bottom .nav__list .nav__item:first-of-type {
+  margin-bottom: 1.5rem;
 }
 .nav__list,
 .nav .product__list,
@@ -250,12 +256,35 @@
   font-size: 1.125rem;
   font-weight: 600;
 }
+.btn--login {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+.btn--login:hover, .btn--login:focus {
+  text-decoration: underline 2px;
+  letter-spacing: 1.25px;
+}
+.btn--sign-up {
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1.125rem;
+  color: #ffffff;
+  background-image: linear-gradient(to bottom right, #ff8f71, #ff3e55);
+  border-radius: 28px;
+  background-color: #ff505c;
+  padding: 0.9375rem 2.5rem;
+}
+.btn--sign-up:hover, .btn--sign-up:focus {
+  background-image: linear-gradient(to bottom right, #ff3e55, #ff8f71);
+  background-color: #ff7b86;
+}
 .btn--start, .btn--learn {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-size: inherit;
   line-height: 1.14875rem;
-  border-radius: 100px;
+  border-radius: 28px;
 }
 .btn--start {
   color: #ff505c;
