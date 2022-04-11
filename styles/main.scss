@@ -117,7 +117,6 @@ $gradient-body-2: #3f4164;
     }
 
     &__menu {
-        // display: none;
         position: absolute;
         top: 65px;
         left: 0;
@@ -325,7 +324,16 @@ $gradient-body-2: #3f4164;
 .btn {
     transition: all 250ms;
 
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    }
+
     // &--hamburger {
+
+    // }
+
+    // &--close {
 
     // }
 
@@ -340,19 +348,10 @@ $gradient-body-2: #3f4164;
 
         &:hover,
         &:focus {
-            cursor: pointer;
             text-decoration: underline 2px;
             opacity: 75%;
         }
     }
-
-    // &--company {
-
-    // }
-
-    // &--connect {
-
-    // }
 
     &--login {
         font-size: 1.125rem;
@@ -478,6 +477,6 @@ $gradient-body-2: #3f4164;
     }
     
     &--flip {
-        transform: rotate(180deg);
+        transform: rotate(-180deg);
     }
 }

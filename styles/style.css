@@ -253,6 +253,9 @@
 .btn {
   transition: all 250ms;
 }
+.btn:hover, .btn:focus {
+  cursor: pointer;
+}
 .btn--product, .btn--company, .btn--connect {
   display: flex;
   margin-inline: auto;
@@ -261,7 +264,6 @@
   font-weight: 600;
 }
 .btn--product:hover, .btn--product:focus, .btn--company:hover, .btn--company:focus, .btn--connect:hover, .btn--connect:focus {
-  cursor: pointer;
   text-decoration: underline 2px;
   opacity: 75%;
 }
@@ -344,5 +346,5 @@
   display: none;
 }
 .icon--flip {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
