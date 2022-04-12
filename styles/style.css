@@ -17,6 +17,9 @@
   border: initial;
   background-color: initial;
   color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
 }
 
 .link {
@@ -44,6 +47,11 @@
   padding: 1.0625rem 0 0.8125rem 0;
   border-radius: 5px;
   background-color: rgba(63, 65, 100, 0.08);
+}
+@media (min-width: 800px) {
+  .container--list {
+    position: absolute;
+  }
 }
 
 .heading {
@@ -93,6 +101,9 @@
   }
 }
 @media (min-width: 1100px) {
+  .hero {
+    padding-bottom: 9.6875rem;
+  }
   .hero__heading {
     font-size: 4rem;
     line-height: 6.128125rem;
@@ -106,12 +117,12 @@
   .hero {
     background-image: url("../assets/bg-pattern-intro-desktop.svg"), linear-gradient(to bottom right, #ff8f71, #ff3e55);
     background-position: 25% 52.5%, center;
-    padding-bottom: 9.6875rem;
   }
 }
 
 .nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   position: relative;
   margin-bottom: 6.75rem;
@@ -127,7 +138,7 @@
   right: 0;
   margin-inline: auto;
   min-height: max-content;
-  min-width: 100%;
+  width: min(100%, 500px);
   color: #1f3e5a;
   background-color: #ffffff;
   border-radius: 5px;
@@ -145,15 +156,13 @@
 .nav__bottom .nav__list .nav__item:first-of-type {
   margin-bottom: 1.5rem;
 }
-.nav__list,
-.nav .product__list,
-.nav .company__list,
-.nav .connect__list {
+.nav__list {
   list-style: none;
 }
 .nav .product__list,
 .nav .company__list,
 .nav .connect__list {
+  list-style: none;
   margin-block: 1.5rem;
 }
 .nav .product__item,
@@ -175,10 +184,53 @@
 .nav .connect__link:focus {
   color: #1f3e5a;
 }
-@media (min-width: 1440px) {
+@media (min-width: 800px) {
+  .nav {
+    margin-bottom: 7.4375rem;
+  }
   .nav .logo {
     max-width: initial;
     max-height: initial;
+    margin-right: 4.02375rem;
+  }
+  .nav__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    position: unset;
+    width: 100%;
+    box-shadow: unset;
+    color: rgba(255, 255, 255, 0.75);
+    background-color: unset;
+  }
+  .nav__list {
+    display: flex;
+  }
+  .nav__top {
+    padding-top: unset;
+  }
+  .nav__bottom {
+    border-top: unset;
+    margin-inline: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+  }
+  .nav__bottom .nav__list {
+    align-items: center;
+  }
+  .nav__bottom .nav__list .nav__item:first-of-type {
+    margin-bottom: 0;
+  }
+  .nav .company {
+    margin: 0 2rem;
+  }
+  .nav .product__list,
+.nav .company__list,
+.nav .connect__list {
+    margin-block: unset;
   }
 }
 
@@ -314,8 +366,7 @@
   font-weight: 600;
 }
 .btn--product:hover, .btn--product:focus, .btn--company:hover, .btn--company:focus, .btn--connect:hover, .btn--connect:focus {
-  text-decoration: underline 2px;
-  opacity: 75%;
+  color: rgba(31, 62, 90, 0.75);
 }
 .btn--login {
   font-size: 1.125rem;
@@ -327,7 +378,6 @@
   opacity: 75%;
 }
 .btn--sign-up {
-  font-size: inherit;
   font-weight: 600;
   line-height: 1.125rem;
   color: #ffffff;
@@ -372,6 +422,31 @@
   background-color: #ffffff;
   color: #ff505c;
 }
+@media (min-width: 800px) {
+  .btn--hamburger, .btn--close {
+    display: none;
+  }
+  .btn--product:hover, .btn--product:focus, .btn--company:hover, .btn--company:focus, .btn--connect:hover, .btn--connect:focus {
+    text-decoration: underline 2px;
+    color: white;
+  }
+  .btn--login {
+    font-size: inherit;
+    line-height: 1.14875rem;
+    font-weight: inherit;
+    margin-right: 2rem;
+  }
+  .btn--sign-up {
+    background-image: unset;
+    background-color: #ffffff;
+    color: #ff505c;
+  }
+  .btn--sign-up:hover, .btn--sign-up:focus {
+    background-image: unset;
+    background-color: #ff7b86;
+    color: #ffffff;
+  }
+}
 
 /********************************
     Images and Icons
@@ -413,4 +488,12 @@
 }
 .icon--flip {
   transform: rotate(-180deg);
+}
+@media (min-width: 800px) {
+  .icon--dark-arrow {
+    display: none;
+  }
+  .icon--light-arrow {
+    display: block;
+  }
 }

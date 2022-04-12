@@ -33,6 +33,9 @@ $gradient-body-2: #3f4164;
     border: initial;
     background-color: initial;
     color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
 }
 
 .link {
@@ -60,6 +63,11 @@ $gradient-body-2: #3f4164;
         padding: 1.0625rem 0 0.8125rem 0;
         border-radius: 5px;
         background-color: rgba($gradient-body-2, 8%);
+
+        @media(min-width: 800px) {
+
+            position: absolute;
+        }
     }
 }
 
@@ -120,6 +128,10 @@ $gradient-body-2: #3f4164;
 
     @media(min-width: 1100px) {
 
+        & {
+            padding-bottom: 9.6875rem;
+        }
+
         &__heading {
             font-size: 4rem;
             line-height: 6.128125rem;
@@ -133,18 +145,18 @@ $gradient-body-2: #3f4164;
 
     @media(min-width: 1400px) {
 
-        & {
+        & { 
             background-image:
             url("../assets/bg-pattern-intro-desktop.svg"), 
             linear-gradient(to bottom right, $gradient-hero-1, $gradient-hero-2);
             background-position: 25% 52.5%, center;
-            padding-bottom: 9.6875rem;
         }
     }
 }
 
 .nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     position: relative;
     margin-bottom: 6.75rem;
@@ -161,8 +173,8 @@ $gradient-body-2: #3f4164;
         right: 0;
         margin-inline: auto;
         min-height: max-content;
-        min-width: 100%;
-        color: $dark-blue;
+        width: min(100%, 500px);
+        color: rgba($dark-blue, 100% );
         background-color: $white;
         border-radius: 5px;
         box-shadow: 0 20px 40px rgba(0, 0 , 0, 0.2434);
@@ -186,16 +198,14 @@ $gradient-body-2: #3f4164;
         }
     }
 
-    &__list,
-    .product__list,
-    .company__list,
-    .connect__list {
+    &__list {
         list-style: none;
     }
 
     .product__list,
     .company__list,
     .connect__list {
+        list-style: none;
         margin-block: 1.5rem;
     }
 
@@ -218,21 +228,64 @@ $gradient-body-2: #3f4164;
         }
     }
 
-    @media(min-width: 1440px) {
+    @media(min-width: 800px) {
 
         & {
-
+            margin-bottom: 7.4375rem;
         }
 
         .logo {
             max-width: initial;
             max-height: initial;
+            margin-right: 4.02375rem;
         }
 
         &__menu {
-
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            position: unset;
+            width: min(100%);
+            box-shadow: unset;
+            color: rgba($white, 75%);
+            background-color: unset;
         }
 
+        &__list {
+            display: flex;
+        }
+
+        &__top {
+            padding-top: unset;
+        }
+    
+        &__bottom {
+            border-top: unset;
+            margin-inline: unset;
+            padding-top: unset;
+            padding-bottom: unset;
+
+            .nav__list {
+                align-items: center;
+
+                .nav__item:first-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .company {
+            margin: 0 2rem;
+        }
+
+        .product__list,
+        .company__list,
+        .connect__list {
+            margin-block: unset;
+        }
     }
 }
 
@@ -394,14 +447,6 @@ $gradient-body-2: #3f4164;
         cursor: pointer;
     }
 
-    // &--hamburger {
-
-    // }
-
-    // &--close {
-
-    // }
-
     &--product,
     &--company,
     &--connect {
@@ -413,9 +458,10 @@ $gradient-body-2: #3f4164;
 
         &:hover,
         &:focus {
-            text-decoration: underline 2px;
-            opacity: 75%;
+            color: rgba($dark-blue, 75%);
         }
+
+        
     }
 
     &--login {
@@ -431,7 +477,6 @@ $gradient-body-2: #3f4164;
     }
 
     &--sign-up {
-        font-size: inherit;
         font-weight: 600;
         line-height: 1.125rem;
         color: $white;
@@ -490,6 +535,45 @@ $gradient-body-2: #3f4164;
         &:focus {
             background-color: $white;
             color: $red;
+        }
+    }
+
+    @media(min-width: 800px) {
+
+        &--hamburger,
+        &--close {
+            display: none;
+        }
+
+        &--product,
+        &--company,
+        &--connect {
+
+            &:hover,
+            &:focus {
+                text-decoration: underline 2px;
+                color: rgba($white, 100%);
+            }
+        }
+
+        &--login {
+            font-size: inherit;
+            line-height: 1.14875rem;
+            font-weight: inherit;
+            margin-right: 2rem;
+        }
+
+        &--sign-up { 
+            background-image: unset;
+            background-color: $white;
+            color: $red ;
+
+            &:hover,
+            &:focus {
+                background-image: unset;
+                background-color: $light-red;
+                color: $white;
+            }
         }
     }
 }
@@ -551,9 +635,25 @@ $gradient-body-2: #3f4164;
 
     &--light-arrow {
         display: none;
+
+        // &:hover,
+        // &:focus {
+        //     opacity: 100%;
+        // }
     }
     
     &--flip {
         transform: rotate(-180deg);
+    }
+
+    @media(min-width: 800px) {
+
+        &--dark-arrow {
+            display: none;
+        }
+
+        &--light-arrow {
+            display: block;
+        }
     }
 }
