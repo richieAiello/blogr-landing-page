@@ -261,9 +261,6 @@
 /********************************
     Main
 ********************************/
-.main {
-  margin-bottom: 6.25rem;
-}
 .main__heading {
   transition: all 250ms;
   font-size: 2.5rem;
@@ -361,6 +358,7 @@
     background-size: 1014px 1018px, cover;
     padding-top: 6.9375rem;
     padding-bottom: 6.9375rem;
+    margin-bottom: 18.8125rem;
   }
   .main__infrastructure .main__wrapper {
     display: flex;
@@ -376,13 +374,30 @@
 .main__open-source {
   display: flex;
   flex-direction: column;
+  margin-bottom: 6.25rem;
+}
+.main__open-source .container {
+  order: 2;
 }
 .main__open-source .main__context {
-  order: 2;
   margin-top: 2.875rem;
 }
 .main__open-source .main__context .main__text:first-of-type {
   margin-bottom: 2.5rem;
+}
+@media (min-width: 1440px) {
+  .main__open-source {
+    flex-direction: row;
+    margin-bottom: 19.25rem;
+  }
+  .main__open-source .main__context {
+    margin-top: 0;
+    max-width: max-content;
+    margin-left: auto;
+  }
+  .main__open-source .main__context .main__text:first-of-type {
+    margin-bottom: 4rem;
+  }
 }
 
 /********************************
@@ -584,6 +599,15 @@
     bottom: -22ch;
     left: unset;
     right: 638px;
+  }
+  .image--laptop-mobile {
+    display: none;
+  }
+  .image--laptop-desktop {
+    display: block;
+    position: absolute;
+    bottom: -19ch;
+    right: 60ch;
   }
 }
 
