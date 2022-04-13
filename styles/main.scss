@@ -52,6 +52,13 @@ $gradient-body-2: #3f4164;
     font-size: 1rem;
     line-height: 1.75rem;
     text-align: center;
+
+    @media(min-width: 1440px) {
+
+        & {
+            text-align: left;
+        }
+    }
 }
 
 .container {
@@ -67,6 +74,15 @@ $gradient-body-2: #3f4164;
         @media(min-width: 800px) {
 
             position: absolute;
+        }
+    }
+
+    @media(min-width: 1440px) {
+
+        &--footer {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
         }
     }
 }
@@ -97,6 +113,11 @@ $gradient-body-2: #3f4164;
     padding-bottom: 9.75rem;
     margin-bottom: 6.25rem;
     border-bottom-left-radius: 100px;
+
+    &__context {
+        // maintains center alignment on larger screens
+        text-align: center;
+    }
 
     &__heading {
         font-size: 2.25rem;
@@ -231,6 +252,7 @@ $gradient-body-2: #3f4164;
     @media(min-width: 800px) {
 
         & {
+            text-align: left;
             margin-bottom: 7.4375rem;
         }
 
@@ -356,6 +378,7 @@ $gradient-body-2: #3f4164;
     &__infrastructure {
         position: relative;
         color: $white;
+
         // https://css-tricks.com/almanac/properties/b/background-size/
         // Multiple background image reference article
         background-image:
@@ -431,6 +454,35 @@ $gradient-body-2: #3f4164;
         &:hover,
         &:focus {
             border-bottom: 2px solid rgba($white, .75);
+        }
+    }
+
+    @media(min-width: 800px) {
+
+        & {
+            font-size: 0.9375rem;
+            padding: 4.375rem;
+        }
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    @media(min-width: 1440px) {
+
+        .logo {
+            margin-right: 11.5rem;
+        }
+
+        &__wrapper {
+            width: min(100% - 11.5rem);
+            justify-content: space-between;
+        }
+
+        &__heading {
+            margin-top: 0;
         }
     }
 }
