@@ -86,7 +86,7 @@ $gradient-body-2: #3f4164;
         // on mobile to not be affected by the container class.
         &--main-wrapper {
             position: relative;
-            width: min(100% - 3rem, 1110px);
+            max-width: calc(1110px + 3rem);
             margin-inline: auto;
         }
 
@@ -333,6 +333,7 @@ $gradient-body-2: #3f4164;
         transition: all 250ms;
         font-size: 2.5rem;
         line-height: 3.83rem;
+        letter-spacing: -1.2px;
     }
 
     &__sub-heading {
@@ -409,6 +410,7 @@ $gradient-body-2: #3f4164;
             }
 
             .main__context {
+                order: unset;
 
                 .main__sub-heading:first-of-type {
                     margin-top: 0;
@@ -449,6 +451,31 @@ $gradient-body-2: #3f4164;
 
         .main__text {
             color: inherit;
+        }
+
+        @media(min-width: 1440px) {
+
+            & {
+                background-position: -19.5ch -50.5ch, center;
+                background-size: 1014px 1018px, cover;
+                padding-top: 6.9375rem;
+                padding-bottom: 6.9375rem;
+            }
+
+            .main__wrapper {
+                display: flex;
+                position: relative;
+
+                .main__context {
+                    margin-left: auto;
+
+                    .main__heading {
+                        margin-bottom: 0.3125rem;
+                    }
+                }
+            }
+
+            
         }
     }
 
@@ -719,11 +746,18 @@ $gradient-body-2: #3f4164;
 
         &--editor-desktop {
             display: block;
+            max-width: 77%;
             position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 635px;
-            margin-block: auto;
+            top: -235px;
+            left: 665px;
+        }
+
+        &--phones {
+            width: unset;
+            top: unset;
+            bottom: -22ch;
+            left: unset;
+            right: 638px;
         }
     }
 }
