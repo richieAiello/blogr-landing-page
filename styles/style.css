@@ -31,17 +31,8 @@
   background-color: rgba(63, 65, 100, 0.85);
 }
 
-.btn {
-  display: inline-block;
-  border: initial;
-  background-color: initial;
-  color: inherit;
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: inherit;
-}
-
 .link {
+  display: inline-block;
   text-decoration: none;
   color: inherit;
 }
@@ -92,6 +83,7 @@
     right: 0;
     left: 0;
     margin-inline: auto;
+    padding: 1.5rem 1rem;
   }
   .container--list.product__list, .container--list.connect__list {
     min-width: 150px;
@@ -297,6 +289,7 @@
   .nav .product__link,
 .nav .company__link,
 .nav .connect__link {
+    font-size: 0.9375rem;
     font-weight: 400;
     color: #2d2e40;
   }
@@ -480,7 +473,7 @@
   font-weight: 300;
 }
 .footer__link:hover, .footer__link:focus {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+  text-decoration: 2px solid underline;
 }
 @media (min-width: 800px) {
   .footer {
@@ -509,6 +502,12 @@
     Buttons
 ********************************/
 .btn {
+  border: initial;
+  background-color: initial;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
   transition: all 250ms;
 }
 .btn:hover, .btn:focus {
@@ -531,10 +530,10 @@
 }
 .btn--login:hover, .btn--login:focus {
   text-decoration: underline 2px;
-  opacity: 75%;
 }
 .btn--sign-up {
-  font-weight: 600;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
   line-height: 1.125rem;
   color: #ffffff;
   background-image: linear-gradient(to bottom right, #ff8f71, #ff3e55);
@@ -582,15 +581,21 @@
   .btn--hamburger, .btn--close {
     display: none;
   }
+  .btn--product, .btn--company, .btn--connect {
+    font-size: inherit;
+  }
   .btn--product:hover, .btn--product:focus, .btn--company:hover, .btn--company:focus, .btn--connect:hover, .btn--connect:focus {
     text-decoration: underline 2px;
     color: white;
   }
   .btn--login {
-    font-size: inherit;
+    font-size: 1rem;
     line-height: 1.14875rem;
     font-weight: inherit;
     margin-right: 2rem;
+  }
+  .btn--login:hover, .btn--login:focus {
+    color: white;
   }
   .btn--sign-up {
     background-image: unset;
