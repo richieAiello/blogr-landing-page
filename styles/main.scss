@@ -51,17 +51,8 @@ $gradient-body-2: #3f4164;
     }
 }
 
-.btn {
-    display: inline-block;
-    border: initial;
-    background-color: initial;
-    color: inherit;
-    font-family: inherit;
-    font-weight: inherit;
-    font-size: inherit;
-}
-
 .link {
+    display: inline-block;
     text-decoration: none;
     color: inherit;
 }
@@ -92,13 +83,38 @@ $gradient-body-2: #3f4164;
 
     &--list {
         margin-inline: 1.5rem;
+        margin-top: 1.5rem;
         padding: 1.0625rem 0 0.8125rem 0;
         border-radius: 5px;
         background-color: rgba($gradient-body-2, 8%);
 
         @media(min-width: 800px) {
 
-            position: absolute;
+            & {
+                position: absolute;
+                top: 49px;
+                margin-inline: unset;
+                margin-top: 0;
+                padding: 1.5rem;
+                box-shadow: 0 20px 40px rgba(0, 0 , 0, 0.2434);
+                background-color: $white;
+            }
+
+            &.product__list {
+                right: 0;
+            }
+
+            &.company__list {
+                right: 0;
+                left: 0;
+                margin-inline: auto;
+                padding: 1.5rem 1rem;
+            }
+
+            &.product__list,
+            &.connect__list {
+                min-width: 150px;
+            }
         }
     }
 
@@ -236,10 +252,6 @@ $gradient-body-2: #3f4164;
         box-shadow: 0 20px 40px rgba(0, 0 , 0, 0.2434);
     }
 
-    &__top {
-        padding-top: 1.5rem;
-    }
-
     &__bottom {
         border-top: 2px solid #E8E4E4;
         margin-inline: 1.5rem;
@@ -254,15 +266,18 @@ $gradient-body-2: #3f4164;
         }
     }
 
-    &__list {
-        list-style: none;
+    .product,
+    .company,
+    .connect {
+        position: relative;
+        margin: 1.5rem 0;
     }
 
+    &__list,
     .product__list,
     .company__list,
     .connect__list {
         list-style: none;
-        margin-block: 1.5rem;
     }
 
     .product__item,
@@ -315,10 +330,6 @@ $gradient-body-2: #3f4164;
             display: flex;
         }
 
-        &__top {
-            padding-top: unset;
-        }
-    
         &__bottom {
             border-top: unset;
             margin-inline: unset;
@@ -334,14 +345,33 @@ $gradient-body-2: #3f4164;
             }
         }
 
+        .product,
+        .connect {
+            margin: 0;
+        }
+             
         .company {
             margin: 0 2rem;
         }
+        
+        .product__item,
+        .company__item,
+        .connect__item {
+            margin-bottom: 0;
+        }
 
-        .product__list,
-        .company__list,
-        .connect__list {
-            margin-block: unset;
+        .product__link,
+        .company__link,
+        .connect__link {
+            font-size: 0.9375rem;
+            font-weight: 400; 
+            color: $gradient-body-1;
+
+            &:hover,
+            &:focus {
+                font-weight: 700;
+                color: $gradient-body-1;
+            }
         }
     }
 }
@@ -568,7 +598,7 @@ $gradient-body-2: #3f4164;
 
         &:hover,
         &:focus {
-            border-bottom: 2px solid rgba($white, .75);
+            text-decoration: 2px solid underline;
         }
     }
 
@@ -607,6 +637,12 @@ $gradient-body-2: #3f4164;
     Buttons
 ********************************/
 .btn {
+    border: initial;
+    background-color: initial;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
     transition: all 250ms;
 
     &:hover,
@@ -639,12 +675,12 @@ $gradient-body-2: #3f4164;
         &:hover,
         &:focus {
             text-decoration: underline 2px;
-            opacity: 75%;
         }
     }
 
     &--sign-up {
-        font-weight: 600;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 700;
         line-height: 1.125rem;
         color: $white;
         background-image: linear-gradient(to bottom right, $gradient-hero-1, $gradient-hero-2);
@@ -715,6 +751,7 @@ $gradient-body-2: #3f4164;
         &--product,
         &--company,
         &--connect {
+            font-size: inherit;
 
             &:hover,
             &:focus {
@@ -724,10 +761,15 @@ $gradient-body-2: #3f4164;
         }
 
         &--login {
-            font-size: inherit;
+            font-size: 1rem;
             line-height: 1.14875rem;
             font-weight: inherit;
             margin-right: 2rem;
+
+            &:hover,
+            &:focus {
+                color: rgba($white, 100%);
+            }
         }
 
         &--sign-up { 
@@ -817,30 +859,13 @@ $gradient-body-2: #3f4164;
 
 .icon {
 
-    // &--hamburger {
-
-    // }
-
-    // &--close {
-
-    // }
-
     &--arrow {
         margin-left: 0.5rem;
         transition: all 500ms;
     }
 
-    // &--dark-arrow {
-
-    // }
-
     &--light-arrow {
         display: none;
-
-        // &:hover,
-        // &:focus {
-        //     opacity: 100%;
-        // }
     }
     
     &--flip {

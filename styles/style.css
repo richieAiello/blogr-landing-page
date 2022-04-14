@@ -31,17 +31,8 @@
   background-color: rgba(63, 65, 100, 0.85);
 }
 
-.btn {
-  display: inline-block;
-  border: initial;
-  background-color: initial;
-  color: inherit;
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: inherit;
-}
-
 .link {
+  display: inline-block;
   text-decoration: none;
   color: inherit;
 }
@@ -70,6 +61,7 @@
 }
 .container--list {
   margin-inline: 1.5rem;
+  margin-top: 1.5rem;
   padding: 1.0625rem 0 0.8125rem 0;
   border-radius: 5px;
   background-color: rgba(63, 65, 100, 0.08);
@@ -77,6 +69,24 @@
 @media (min-width: 800px) {
   .container--list {
     position: absolute;
+    top: 49px;
+    margin-inline: unset;
+    margin-top: 0;
+    padding: 1.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2434);
+    background-color: #ffffff;
+  }
+  .container--list.product__list {
+    right: 0;
+  }
+  .container--list.company__list {
+    right: 0;
+    left: 0;
+    margin-inline: auto;
+    padding: 1.5rem 1rem;
+  }
+  .container--list.product__list, .container--list.connect__list {
+    min-width: 150px;
   }
 }
 @media (min-width: 1440px) {
@@ -186,9 +196,6 @@
   border-radius: 5px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2434);
 }
-.nav__top {
-  padding-top: 1.5rem;
-}
 .nav__bottom {
   border-top: 2px solid #E8E4E4;
   margin-inline: 1.5rem;
@@ -198,14 +205,17 @@
 .nav__bottom .nav__list .nav__item:first-of-type {
   margin-bottom: 1.5rem;
 }
-.nav__list {
-  list-style: none;
+.nav .product,
+.nav .company,
+.nav .connect {
+  position: relative;
+  margin: 1.5rem 0;
 }
+.nav__list,
 .nav .product__list,
 .nav .company__list,
 .nav .connect__list {
   list-style: none;
-  margin-block: 1.5rem;
 }
 .nav .product__item,
 .nav .company__item,
@@ -252,9 +262,6 @@
   .nav__list {
     display: flex;
   }
-  .nav__top {
-    padding-top: unset;
-  }
   .nav__bottom {
     border-top: unset;
     margin-inline: unset;
@@ -267,13 +274,32 @@
   .nav__bottom .nav__list .nav__item:first-of-type {
     margin-bottom: 0;
   }
+  .nav .product,
+.nav .connect {
+    margin: 0;
+  }
   .nav .company {
     margin: 0 2rem;
   }
-  .nav .product__list,
-.nav .company__list,
-.nav .connect__list {
-    margin-block: unset;
+  .nav .product__item,
+.nav .company__item,
+.nav .connect__item {
+    margin-bottom: 0;
+  }
+  .nav .product__link,
+.nav .company__link,
+.nav .connect__link {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    color: #2d2e40;
+  }
+  .nav .product__link:hover, .nav .product__link:focus,
+.nav .company__link:hover,
+.nav .company__link:focus,
+.nav .connect__link:hover,
+.nav .connect__link:focus {
+    font-weight: 700;
+    color: #2d2e40;
   }
 }
 
@@ -447,7 +473,7 @@
   font-weight: 300;
 }
 .footer__link:hover, .footer__link:focus {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+  text-decoration: 2px solid underline;
 }
 @media (min-width: 800px) {
   .footer {
@@ -476,6 +502,12 @@
     Buttons
 ********************************/
 .btn {
+  border: initial;
+  background-color: initial;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
   transition: all 250ms;
 }
 .btn:hover, .btn:focus {
@@ -498,10 +530,10 @@
 }
 .btn--login:hover, .btn--login:focus {
   text-decoration: underline 2px;
-  opacity: 75%;
 }
 .btn--sign-up {
-  font-weight: 600;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
   line-height: 1.125rem;
   color: #ffffff;
   background-image: linear-gradient(to bottom right, #ff8f71, #ff3e55);
@@ -549,15 +581,21 @@
   .btn--hamburger, .btn--close {
     display: none;
   }
+  .btn--product, .btn--company, .btn--connect {
+    font-size: inherit;
+  }
   .btn--product:hover, .btn--product:focus, .btn--company:hover, .btn--company:focus, .btn--connect:hover, .btn--connect:focus {
     text-decoration: underline 2px;
     color: white;
   }
   .btn--login {
-    font-size: inherit;
+    font-size: 1rem;
     line-height: 1.14875rem;
     font-weight: inherit;
     margin-right: 2rem;
+  }
+  .btn--login:hover, .btn--login:focus {
+    color: white;
   }
   .btn--sign-up {
     background-image: unset;

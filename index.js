@@ -10,19 +10,19 @@ const arrowIcons = document.querySelectorAll('.icon--arrow');
 
 // Product
 const productBtn = document.querySelector('.btn--product');
-const productList = document.querySelector('.product__list .container--list');
+const productList = document.querySelector('.product__list.container--list');
 const productLightArrow = document.querySelector('.btn--product .icon--light-arrow');
 const productDarkArrow = document.querySelector('.btn--product .icon--dark-arrow');
 
 // Company
 const companyBtn = document.querySelector('.btn--company');
-const companyList = document.querySelector('.company__list .container--list');
+const companyList = document.querySelector('.company__list.container--list');
 const companyLightArrow = document.querySelector('.btn--company .icon--light-arrow');
 const companyDarkArrow = document.querySelector('.btn--company .icon--dark-arrow');
 
 // Connect
 const connectBtn = document.querySelector('.btn--connect');
-const connectList = document.querySelector('.connect__list .container--list');
+const connectList = document.querySelector('.connect__list.container--list');
 const connectLightArrow = document.querySelector('.btn--connect .icon--light-arrow');
 const connectDarkArrow = document.querySelector('.btn--connect .icon--dark-arrow');
 
